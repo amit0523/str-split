@@ -1,11 +1,14 @@
 
-File str_split.c implements a function str_split() whose signature is:
+File str_split.c implements a function called str_split() which splits a string
+into an array of string tokens based on a string delimiter. The signature of
+this function is:
+        
+        char **str_split(const char *str, const char *delim, long max_splits)
 
-char **str_split(const char *str, const char *delim, long max_splits)
-
-Function str_split() splits a string ('str') into string tokens (a token is also
-a string). This function uses the 'delim' string to split 'str' into tokens. If
-a 'delim' is found at position "i", then the token ends at the position "i - 1".
+Function str_split() splits a string ('str') into an array of string tokens (a
+token is also a string). This function uses the 'delim' string to split 'str'
+into tokens. If a 'delim' is found at position "i", then the token ends at the
+position "i - 1".
 
 'max_splits' argument is used to control hwo many times 'str' should be split.
 For example, if 'max_splits' is 1, then 'str' will be split one time only. So,
